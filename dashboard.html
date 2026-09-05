@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Dashboard — Unified Emergency Coordination</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="dashboard.css">
+<script src="icons.js"></script>
+</head>
+<body class="dash-body">
+
+<nav class="nav dash-nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Unified Response</div>
+    <a href="index.html" class="btn btn-ghost"><span class="icon" data-icon="arrow-left"></span> Back to overview</a>
+  </div>
+</nav>
+
+<div class="dash-wrap">
+  <div class="rail">
+    <div class="rail-label">VIEW AS</div>
+    <div class="rail-hint">Switching role changes exactly what's visible on the right.</div>
+    <div id="rail-buttons"></div>
+  </div>
+  <div class="main" id="main"></div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

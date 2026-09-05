@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unified Emergency Coordination System</title>
+<link rel="stylesheet" href="styles.css">
+<script src="icons.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Unified Response</div>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#departments">Departments</a>
+      <a href="#routing">Routing</a>
+      <a href="#access">Access control</a>
+      <a href="#tech">Technical approach</a>
+    </div>
+    <a href="dashboard.html" class="btn btn-primary"><span class="icon" data-icon="play"></span> Live demo</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">AI-POWERED PUBLIC SAFETY</div>
+      <h1>Multi-department emergency coordination, without the phone calls</h1>
+      <p class="lede">A shared coordination layer that automatically routes an emergency to every department that needs to know — while each department keeps full control of its own tools, and citizens see only what keeps them safe.</p>
+      <div class="hero-ctas">
+        <a href="dashboard.html" class="btn btn-primary"><span class="icon" data-icon="play"></span> Launch the live dashboard</a>
+        <a href="#problem" class="btn btn-ghost">See how it works</a>
+      </div>
+    </div>
+    <div class="hub" id="hub"></div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">THE PROBLEM</div>
+      <h2>Departments respond alone, and gaps cost time</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-circle amber"><span class="icon" data-icon="triangle-exclamation"></span></div>
+        <h3>No shared visibility</h3>
+        <p>Traffic police don't know an ambulance is approaching until it's already stuck at a red light.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle amber"><span class="icon" data-icon="triangle-exclamation"></span></div>
+        <h3>Blind hospital routing</h3>
+        <p>Patients get sent to the nearest hospital, not the one with an open bed or ICU capacity.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle amber"><span class="icon" data-icon="triangle-exclamation"></span></div>
+        <h3>Manual coordination</h3>
+        <p>During floods or mass-casualty events, departments still coordinate by phone calls.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="idea">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">THE IDEA</div>
+      <h2>One coordination layer, not one traffic app</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-circle"><span class="icon" data-icon="route"></span></div>
+        <h3>Automatic routing</h3>
+        <p>An emergency reported in any department instantly notifies every other department that needs to know.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><span class="icon" data-icon="lock"></span></div>
+        <h3>Departments keep control</h3>
+        <p>Each department keeps full ownership of its own tools and data — nobody hands over control.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><span class="icon" data-icon="eye"></span></div>
+        <h3>Citizens see only what matters</h3>
+        <p>Public users get the minimum information relevant to their safety, never internal operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="departments">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">WHO'S INVOLVED</div>
+      <h2>Eight departments, one command centre</h2>
+    </div>
+    <div class="grid-4" style="margin-bottom:16px;">
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="traffic-light"></span></div><h4>Traffic Police</h4></div>
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="truck-medical"></span></div><h4>Health / Ambulance</h4></div>
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="hospital"></span></div><h4>Hospitals</h4></div>
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="fire-extinguisher"></span></div><h4>Fire & Rescue</h4></div>
+    </div>
+    <div class="grid-4">
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="shield-halved"></span></div><h4>Police</h4></div>
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="city"></span></div><h4>Municipal Corp.</h4></div>
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="cloud-showers-heavy"></span></div><h4>Disaster Mgmt.</h4></div>
+      <div class="dept-card"><div class="icon-circle"><span class="icon" data-icon="car-side"></span></div><h4>Transport / RTO</h4></div>
+    </div>
+    <p style="text-align:center; margin-top:28px; color:var(--teal); font-style:italic;">Coordinated through a Smart City Command Centre — which orchestrates, but owns no department's data.</p>
+  </div>
+</section>
+
+<section id="routing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">HOW ROUTING WORKS</div>
+      <h2>Each emergency type has a fixed subscriber list</h2>
+    </div>
+    <table class="routing">
+      <tr><th>Emergency type</th><th>Automatically notified</th></tr>
+      <tr><td>Medical emergency</td><td>Traffic Police, Health, Hospitals</td></tr>
+      <tr><td>Fire</td><td>Fire & Rescue, Traffic, Police, Hospitals</td></tr>
+      <tr><td>Major road accident</td><td>Police, Traffic, Fire, Health, Hospitals</td></tr>
+      <tr><td>Flood / structural</td><td>Disaster Mgmt, Municipal, Fire, Police, Hospitals</td></tr>
+      <tr><td>Mass casualty event</td><td>Every department</td></tr>
+    </table>
+    <p style="margin-top:20px; font-style:italic; color:var(--teal);">This is a publish–subscribe model — each department subscribes to categories relevant to it, and routing runs without a single phone call.</p>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">ACCESS CONTROL</div>
+      <h2>Three tiers decide who sees what</h2>
+    </div>
+    <div class="grid-3">
+      <div class="tier-card">
+        <div class="icon-circle amber"><span class="icon" data-icon="tower-broadcast"></span></div>
+        <h3>Command centre</h3>
+        <ul>
+          <li>Sees every active incident</li>
+          <li>Orchestrates routing only</li>
+          <li>Cannot edit dept. systems</li>
+        </ul>
+      </div>
+      <div class="tier-card highlight">
+        <div class="icon-circle"><span class="icon" data-icon="lock"></span></div>
+        <h3>Department centre</h3>
+        <ul>
+          <li>Full access to own tools</li>
+          <li>Read-only view of others</li>
+          <li>Edits nothing outside scope</li>
+        </ul>
+      </div>
+      <div class="tier-card">
+        <div class="icon-circle amber"><span class="icon" data-icon="users"></span></div>
+        <h3>Citizens</h3>
+        <ul>
+          <li>Plain-language alerts only</li>
+          <li>Public status: closures, ETA</li>
+          <li>No internal data, ever</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tech">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">TECHNICAL APPROACH</div>
+      <h2>Three mechanisms do the real work</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-circle"><span class="icon" data-icon="diagram-project"></span></div>
+        <h3>Routing engine</h3>
+        <p>A rules table maps emergency type to subscriber departments. Production: Kafka or a managed pub-sub queue.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><span class="icon" data-icon="scale-balanced"></span></div>
+        <h3>Role-based access</h3>
+        <p>JWT claims carry role and department. Enforced server-side — never trust a UI toggle alone.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle amber"><span class="icon" data-icon="eye"></span></div>
+        <h3>Citizen data filtering</h3>
+        <p>A dedicated public API exposes only pre-approved fields, never the same endpoints departments use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="matters">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">WHY THIS MATTERS</div>
+      <h2>The gap this closes isn't technology — it's coordination</h2>
+    </div>
+    <div class="grid-3">
+      <div class="stat"><div class="num">8+</div><p>Departments coordinated through one shared layer instead of isolated apps</p></div>
+      <div class="stat"><div class="num">0</div><p>Data ownership transferred away from any department</p></div>
+      <div class="stat"><div class="num">1</div><p>Plain-language alert citizens receive, with no internal data exposed</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="future">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">CHALLENGES & NEXT STEPS</div>
+      <h2>What's left before this is deployable</h2>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <h3 style="color:var(--amber); margin-top:0;">Challenges</h3>
+        <ul class="col-list">
+          <li>Data-sharing agreements between departments</li>
+          <li>Real-time GPS and network reliability under load</li>
+          <li>Signal-controller integration for true green corridors</li>
+          <li>Compliance with data protection regulations</li>
+        </ul>
+      </div>
+      <div class="card" style="border-color:var(--teal);">
+        <h3 style="color:var(--teal); margin-top:0;">Next steps</h3>
+        <ul class="col-list">
+          <li>Pilot with one ward or zone</li>
+          <li>Integrate real map and live GPS data</li>
+          <li>Add an authentication layer with real role claims</li>
+          <li>Formal MOU framework for data sharing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <h2>See the access model in action</h2>
+      <p>Switch between the command centre, any department, and the citizen view to see exactly what routing and access control look like in practice.</p>
+      <a href="dashboard.html" class="btn btn-primary"><span class="icon" data-icon="play"></span> Open the live dashboard</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Unified Emergency Coordination System — model project</span>
+    <span>Prototype for demonstration purposes only</span>
+  </div>
+</footer>
+
+<script>
+  applyIcons(document);
+  const hub = document.getElementById('hub');
+  const icons = ['traffic-light','truck-medical','hospital','fire-extinguisher','shield-halved','city','cloud-showers-heavy','users'];
+  const n = icons.length;
+  const R = 42; // percent of hub size
+  hub.innerHTML = '<div class="hub-center"><span class="icon" data-icon="tower-broadcast"></span></div>';
+  icons.forEach((icon, i) => {
+    const angle = (i / n) * 2 * Math.PI - Math.PI / 2;
+    const x = 50 + R * Math.cos(angle);
+    const y = 50 + R * Math.sin(angle);
+    const line = document.createElement('div');
+    const len = R; // approx percent -> will size via transform using px at runtime
+    line.className = 'hub-line';
+    line.style.width = R + '%';
+    line.style.transform = `rotate(${angle}rad)`;
+    line.style.animationDelay = (0.1 + i * 0.05) + 's';
+    hub.appendChild(line);
+
+    const node = document.createElement('div');
+    node.className = 'hub-node';
+    node.style.left = `calc(${x}% - 28px)`;
+    node.style.top = `calc(${y}% - 28px)`;
+    node.style.animationDelay = (0.3 + i * 0.06) + 's';
+    node.setAttribute('data-icon', icon);
+    hub.appendChild(node);
+  });
+  applyIcons(hub);
+</script>
+
+</body>
+</html>
